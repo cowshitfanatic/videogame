@@ -1,0 +1,9 @@
+{
+  "name": "broken-oath-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser mock of The Broken Oath RTS prototype.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
