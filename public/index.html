@@ -3,30 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Broken Oath — Web Mock</title>
+  <title>The Broken Oath — RTS Lab</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <main class="shell">
     <section class="game-frame">
-      <canvas id="battlefield" aria-label="The Broken Oath battlefield"></canvas>
+      <canvas id="battlefield" aria-label="The Broken Oath RTS battlefield"></canvas>
       <div class="topbar panel">
         <div>
-          <div class="eyebrow">THE BROKEN OATH</div>
-          <div class="subline">The Sable Vale · a border war in an alternate Iron Age Gaul</div>
-          <div class="stats"><span id="stores">ALDER STORES: 120</span><span id="time">TIME: 000.0</span><span id="baseHp">ALDER HILLFORT: 500 / 500</span><span id="enemyHp">FLINT HILLFORT: 500 / 500</span></div>
+          <div class="eyebrow">THE BROKEN OATH · RTS LAB</div>
+          <div class="subline">Experimental browser engine — the speculative branch, not the original desktop project</div>
+          <div class="stats"><span id="stores">ALDER STORES: 120</span><span id="time">TIME: 000.0</span><span id="baseHp">ALDER HILLFORT: 650 / 650</span><span id="enemyHp">FLINT HILLFORT: 650 / 650</span></div>
         </div>
-        <div class="objective"><b>FIRST BATTLE</b><span>Break the Flint Crown's hillfort.</span><small>ALDER LEAGUE vs. FLINT CROWN</small></div>
+        <div class="objective"><b>FIRST BATTLE</b><span>Break the Flint Crown's hillfort.</span><small>Fog · production · ranged research · AI attacks</small></div>
       </div>
-
-      <div class="help panel">LMB select / drag box · RMB move, extract, or attack<br><span>WASD / arrows pan · wheel zoom · SPACE pause · B spearman · W gatherer · R restart</span></div>
+      <div class="help panel">LMB select / drag box · RMB move, gather, or attack · Shift adds selection<br><span>0–9 control groups · B spearman · A archer · W gatherer · T research · F5/F9 save/load · SPACE pause · R restart</span></div>
       <div class="selection panel" id="selection">NO SELECTION<small>Select units or a hillfort</small></div>
       <div class="minimap panel"><div>SABLE VALE</div><canvas id="minimap" width="264" height="138"></canvas></div>
-      <div class="status" id="status">Select a worker or soldier. Right-click to issue an order.</div>
+      <div class="status" id="status">Capture the middle. Keep workers alive.</div>
       <div class="pause" id="pause">PAUSED</div>
       <div class="endgame" id="endgame"><strong id="winner">ALDER LEAGUE WINS</strong><span id="reason">The enemy hillfort has fallen.</span><button id="restart">RESTART</button></div>
     </section>
   </main>
-  <script src="/app.js"></script>
+  <script src="/engine.js"></script>
+  <script>document.getElementById('restart').addEventListener('click',()=>location.reload());</script>
 </body>
 </html>
