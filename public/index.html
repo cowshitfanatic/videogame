@@ -4,29 +4,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Broken Oath — RTS Lab</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=2">
 </head>
 <body>
   <main class="shell">
     <section class="game-frame">
       <canvas id="battlefield" aria-label="The Broken Oath RTS battlefield"></canvas>
-      <div class="topbar panel">
-        <div>
-          <div class="eyebrow">THE BROKEN OATH · RTS LAB</div>
-          <div class="subline">Experimental browser engine — the speculative branch, not the original desktop project</div>
-          <div class="stats"><span id="stores">ALDER STORES: 120</span><span id="time">TIME: 000.0</span><span id="baseHp">ALDER HILLFORT: 650 / 650</span><span id="enemyHp">FLINT HILLFORT: 650 / 650</span></div>
+
+      <header class="topbar panel">
+        <div class="brand">
+          <div class="eyebrow">THE BROKEN OATH</div>
+          <div class="labtag">OPENRA-STYLE WEB EXPERIMENT · BUILD 02</div>
+          <div class="subline">Sable Vale tactical command layer · speculative browser branch</div>
+          <div class="stats">
+            <span id="stores">ALDER STORES: 120</span>
+            <span id="time">TIME: 000.0</span>
+            <span id="baseHp">ALDER HILLFORT: 650 / 650</span>
+            <span id="enemyHp">FLINT HILLFORT: 650 / 650</span>
+          </div>
         </div>
-        <div class="objective"><b>FIRST BATTLE</b><span>Break the Flint Crown's hillfort.</span><small>Fog · production · ranged research · AI attacks</small></div>
+        <div class="mission panel-inset">
+          <b>MISSION 01 · THE BROKEN OATH</b>
+          <strong>Break the Flint Crown's hillfort.</strong>
+          <small>Secure iron · research ranged warfare · survive the counterattack</small>
+        </div>
+      </header>
+
+      <aside class="techdeck panel">
+        <div class="deck-title">COMMAND DECK</div>
+        <div class="deck-row"><span>TECH</span><b>RANGED WARFARE</b></div>
+        <div class="deck-row"><span>UNITS</span><b>GATHERER · SPEARMAN · ARCHER · SCOUT</b></div>
+        <div class="deck-row"><span>BUILDINGS</span><b>HILLFORT · BARRACKS · WATCHTOWER</b></div>
+        <div class="deck-row"><span>CONTROL</span><b>0–9 GROUPS · SHIFT ADD · RMB ORDERS</b></div>
+      </aside>
+
+      <div class="orders panel">
+        <div class="orders-title">FIELD ORDERS</div>
+        <div>LMB select / drag box · RMB move, gather, attack</div>
+        <div>0–9 control groups · B spearman · A archer · W gatherer · T research</div>
+        <div>F5 save · F9 load · SPACE pause · R restart</div>
       </div>
-      <div class="help panel">LMB select / drag box · RMB move, gather, or attack · Shift adds selection<br><span>0–9 control groups · B spearman · A archer · W gatherer · T research · F5/F9 save/load · SPACE pause · R restart</span></div>
+
       <div class="selection panel" id="selection">NO SELECTION<small>Select units or a hillfort</small></div>
-      <div class="minimap panel"><div>SABLE VALE</div><canvas id="minimap" width="264" height="138"></canvas></div>
+
+      <div class="minimap panel">
+        <div class="minimap-title">SABLE VALE · TACTICAL MAP</div>
+        <canvas id="minimap" width="264" height="138"></canvas>
+      </div>
+
       <div class="status" id="status">Capture the middle. Keep workers alive.</div>
       <div class="pause" id="pause">PAUSED</div>
       <div class="endgame" id="endgame"><strong id="winner">ALDER LEAGUE WINS</strong><span id="reason">The enemy hillfort has fallen.</span><button id="restart">RESTART</button></div>
     </section>
   </main>
-  <script src="/engine.js"></script>
+  <script src="/engine.js?v=2"></script>
   <script>document.getElementById('restart').addEventListener('click',()=>location.reload());</script>
 </body>
 </html>
